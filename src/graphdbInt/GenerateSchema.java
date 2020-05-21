@@ -33,7 +33,7 @@ public class GenerateSchema {
 			if(line.toLowerCase().contains("mode:"))
 			{
 				System.out.println(line);
-				String toWrite = line.replaceAll("mode: ", "");
+				String toWrite = line.replaceAll("mode:", "").trim();
 				String[] components = toWrite.split("\\(");
 				components[1] = components[1].replaceAll("\\).", "");
 				String[] args = components[1].split(",");
